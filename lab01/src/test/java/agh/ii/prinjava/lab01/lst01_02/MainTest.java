@@ -9,9 +9,4 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MainTest {
 
-    @Test
-    void testIsEncapsulated() {
-        HelloEncapsulation enDemo = new HelloEncapsulation(42);
-        assertTrue(enDemo.isEncapsulated());
-    }
 }

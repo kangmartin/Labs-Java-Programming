@@ -24,4 +24,20 @@ class MainTest {
         assertEquals(18.0, resultat, 0.001);
     }
 
+    @Test
+    public void testPerimterCircle(){
+        Circle circle = new Circle(10);
+        double result = circle.perimeter();
+        double tolerance = 0.1;
+        assertEquals(62.83,result,tolerance);
+    }
+
+    @Test
+    public void testAreaCircle(){
+        Circle circle = new Circle(10);
+        double result = circle.area();
+        double tolerance = 0.1;
+        assertEquals(314.159,result,tolerance);
+    }
+
 }
