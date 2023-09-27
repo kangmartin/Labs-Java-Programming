@@ -4,25 +4,12 @@ import agh.ii.prinjava.lab02.exc02_01.StackOfInts;
 
 public class LinkedListBasedImpl implements StackOfInts {
 
-    @Override
-    public int pop() {
-        throw new IllegalStateException("To be implemented");
-    }
+    private Node first = null;
+    private int numOfElems = 0;
 
-    @Override
-    public void push(int x) {
-        throw new IllegalStateException("To be implemented");
-    }
-
-    @Override
-    public int numOfElems() {
-        return numOfElems;
-    }
-
-    @Override
-    public int peek() {
-        throw new IllegalStateException("To be implemented");
-    }
+    /**
+     * A node in the linked list.
+     */
 
     private static class Node {
         int elem;
@@ -34,6 +21,74 @@ public class LinkedListBasedImpl implements StackOfInts {
         }
     }
 
-    private Node first = null;
-    private int numOfElems = 0;
+    /**
+     * **Pops** the top element off the stack and returns it.
+     *
+     * @return the top element of the stack
+     * @throws IllegalStateException if the stack is empty
+     */
+
+    @Override
+    public int pop() {
+        if (isEmpty()) {
+            throw new IllegalStateException("Stack is empty");
+        }
+
+        int elem = first.elem;
+        first = first.next;
+        numOfElems--;
+
+        return elem;
+    }
+
+    /**
+     * **Pushes** an integer onto the top of the stack.
+     *
+     * @param x the integer to push onto the stack
+     */
+
+    @Override
+    public void push(int x) {
+        Node newNode = new Node(x, first);
+        first = newNode;
+        numOfElems++;
+    }
+
+    /**
+     * **Checks if the stack is empty.**
+     *
+     * @return true if the stack is empty, false otherwise
+     */
+
+    @Override
+    public boolean isEmpty() {
+        return numOfElems == 0;
+    }
+
+    /**
+     * **Returns the number of elements in the stack.**
+     *
+     * @return the number of elements in the stack
+     */
+
+    @Override
+    public int numOfElems() {
+        return numOfElems;
+    }
+
+    /**
+     * **Returns the top element of the stack without removing it.**
+     *
+     * @return the top element of the stack
+     * @throws IllegalStateException if the stack is empty
+     */
+
+    @Override
+    public int peek() {
+        if (isEmpty()) {
+            throw new IllegalStateException("Stack is empty");
+        }
+
+        return first.elem;
+    }
 }

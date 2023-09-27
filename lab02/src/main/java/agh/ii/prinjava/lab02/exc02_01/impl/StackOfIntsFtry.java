@@ -1,6 +1,8 @@
 package agh.ii.prinjava.lab02.exc02_01.impl;
 
 import agh.ii.prinjava.lab02.exc02_01.StackOfInts;
+import agh.ii.prinjava.lab02.exc02_01.impl.ArrayBasedImpl;
+import agh.ii.prinjava.lab02.exc02_01.impl.LinkedListBasedImpl;
 
 /**
  * Stack of integers factory
