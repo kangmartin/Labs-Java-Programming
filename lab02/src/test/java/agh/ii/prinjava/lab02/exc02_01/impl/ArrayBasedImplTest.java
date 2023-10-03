@@ -17,32 +17,23 @@ public class ArrayBasedImplTest {
     @Test
     public void testPushAndPop() {
         StackOfInts stack = new ArrayBasedImpl();
-
-        // Push an element onto the stack.
         stack.push(1);
-
-        // Pop the element off the stack and verify that it is the same element that we pushed on.
         assertEquals(1, stack.pop());
-
-        // Verify that the stack is now empty.
         assertTrue(stack.isEmpty());
     }
 
     @Test
     public void testPushAndPopMultipleElements() {
         StackOfInts stack = new ArrayBasedImpl();
-
-        // Push multiple elements onto the stack.
         stack.push(1);
         stack.push(2);
         stack.push(3);
 
-        // Pop the elements off the stack and verify that they are in the reverse order of which they were pushed.
+
         assertEquals(3, stack.pop());
         assertEquals(2, stack.pop());
         assertEquals(1, stack.pop());
 
-        // Verify that the stack is now empty.
         assertTrue(stack.isEmpty());
     }
 
@@ -50,13 +41,10 @@ public class ArrayBasedImplTest {
     public void testPeek() {
         StackOfInts stack = new ArrayBasedImpl();
 
-        // Push an element onto the stack.
         stack.push(1);
 
-        // Peek at the top element of the stack and verify that it is the element that we pushed on.
         assertEquals(1, stack.peek());
 
-        // Verify that the stack is still not empty.
         assertFalse(stack.isEmpty());
     }
 
@@ -64,7 +52,6 @@ public class ArrayBasedImplTest {
     public void testPopOnEmptyStack() {
         StackOfInts stack = new ArrayBasedImpl();
 
-        // Try to pop an element from an empty stack.
         assertThrows(IllegalStateException.class, stack::pop);
     }
 
@@ -72,7 +59,6 @@ public class ArrayBasedImplTest {
     public void testPeekOnEmptyStack() {
         StackOfInts stack = new ArrayBasedImpl();
 
-        // Try to peek at the top element of an empty stack.
         assertThrows(IllegalStateException.class, stack::peek);
     }
 }

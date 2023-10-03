@@ -9,8 +9,6 @@ public interface StackOfInts {
     /**
      * **Pops** the top element off the stack and returns it.
      *
-     * @return the top element of the stack
-     * @throws IllegalStateException if the stack is empty
      */
 
     int pop() throws IllegalStateException;
@@ -18,7 +16,6 @@ public interface StackOfInts {
     /**
      * **Pushes** an integer onto the top of the stack.
      *
-     * @param x the integer to push onto the stack
      */
 
     void push(int x);
@@ -26,7 +23,6 @@ public interface StackOfInts {
     /**
      * **Checks if the stack is empty.**
      *
-     * @return true if the stack is empty, false otherwise
      */
 
     default boolean isEmpty() {
@@ -35,8 +31,6 @@ public interface StackOfInts {
 
     /**
      * **Returns the number of elements in the stack.**
-     *
-     * @return the number of elements in the stack
      */
 
     int numOfElems();
@@ -44,8 +38,6 @@ public interface StackOfInts {
     /**
      * **Returns the top element of the stack without removing it.**
      *
-     * @return the top element of the stack
-     * @throws IllegalStateException if the stack is empty
      */
 
     int peek() throws IllegalStateException;

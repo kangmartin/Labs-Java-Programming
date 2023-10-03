@@ -24,8 +24,6 @@ public class LinkedListBasedImpl implements StackOfInts {
     /**
      * **Pops** the top element off the stack and returns it.
      *
-     * @return the top element of the stack
-     * @throws IllegalStateException if the stack is empty
      */
 
     @Override
@@ -44,7 +42,6 @@ public class LinkedListBasedImpl implements StackOfInts {
     /**
      * **Pushes** an integer onto the top of the stack.
      *
-     * @param x the integer to push onto the stack
      */
 
     @Override
@@ -57,7 +54,6 @@ public class LinkedListBasedImpl implements StackOfInts {
     /**
      * **Checks if the stack is empty.**
      *
-     * @return true if the stack is empty, false otherwise
      */
 
     @Override
@@ -68,7 +64,6 @@ public class LinkedListBasedImpl implements StackOfInts {
     /**
      * **Returns the number of elements in the stack.**
      *
-     * @return the number of elements in the stack
      */
 
     @Override
@@ -79,8 +74,6 @@ public class LinkedListBasedImpl implements StackOfInts {
     /**
      * **Returns the top element of the stack without removing it.**
      *
-     * @return the top element of the stack
-     * @throws IllegalStateException if the stack is empty
      */
 
     @Override
